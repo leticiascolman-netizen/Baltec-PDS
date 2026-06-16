@@ -1,0 +1,157 @@
+﻿@page "/cadastraBalanca"
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .container-balanca {
+        width: 700px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #f4f4f4;
+    }
+
+    .titulo {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .row {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 20px;
+    }
+
+    .campo {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .campo label {
+        color: #777;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .campo input,
+    .campo select {
+        height: 35px;
+        border: 1px solid #cfcfcf;
+        padding: 5px 10px;
+        font-size: 14px;
+        background: white;
+    }
+
+    .btn-area {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .btn-salvar {
+        background-color: #0d6b2f;
+        color: white;
+        border: none;
+        width: 180px;
+        height: 45px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .btn-salvar:hover {
+        opacity: .9;
+    }
+</style>
+
+<div class="container-balanca">
+
+    <div class="titulo">
+        Cadastro de Balança
+    </div>
+
+    <form method="post">
+
+        <div class="row">
+            <div class="campo">
+                <label>Número de série</label>
+                <input type="text" name="NumeroSerie" />
+            </div>
+
+            <div class="campo">
+                <label>Peso máximo</label>
+                <input type="number" step="0.01" placeholder="Kg" name="PesoMaximo" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="campo">
+                <label>Modelo comercial</label>
+                <input type="text" name="ModeloComercial" />
+            </div>
+
+            <div class="campo">
+                <label>Divisão mínima</label>
+                <input type="number" step="0.01" placeholder="Kg" name="DivisaoMinima" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="campo">
+                <label>Categoria</label>
+                <select name="Categoria">
+                    <option></option>
+                    <option>Industrial</option>
+                    <option>Comercial</option>
+                    <option>Laboratorial</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Situação atual</label>
+                <select name="SituacaoAtual">
+                    <option></option>
+                    <option>Ativa</option>
+                    <option>Inativa</option>
+                    <option>Manutenção</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="campo">
+                <label>Número de série do fabricante</label>
+                <input type="text" name="NumeroSerieFabricante" />
+            </div>
+
+            <div class="campo">
+                <label>Data de produção</label>
+                <input type="date" name="DataProducao" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="campo">
+                <label>Proprietário atual</label>
+                <input type="text" name="ProprietarioAtual" />
+            </div>
+
+            <div class="campo">
+                <label>Quem cadastrou</label>
+                <input type="text" name="QuemCadastrou" />
+            </div>
+        </div>
+
+        <div class="btn-area">
+            <button type="submit" class="btn-salvar">
+                Salvar
+            </button>
+        </div>
+
+    </form>
+
+</div>
